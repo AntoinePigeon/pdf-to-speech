@@ -20,3 +20,27 @@ for page in reader.pages:
 print("Total characters extracted:", len(full_text))
 print("---- First 300 characters ----")
 print(full_text[:300])
+print("\n")
+
+
+def chunk_text(text, max_chars=3000):
+    words = text.split()
+    chunks = []
+    current_chunk = []
+    for word in words:
+        if len(" ".join(current_chunk)) + len(word) + 1 <= max_chars:
+            current_chunk.append(word)
+        else:
+            chunks.append(" ".join(current_chunk))
+            current_chunk = [word]
+    if current_chunk:
+        chunks.append(" ".join(current_chunk))
+    return chunks
+
+
+test = "word " * 1000   # makes a string of 1000 "word "s, about 5000 chars
+result = chunk_text(test)
+
+print("Number of chunks:", len(result))
+for i, chunk in enumerate(result):
+    print(f"Chunk {i} length: {len(chunk)}")
