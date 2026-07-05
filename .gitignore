@@ -1,0 +1,24 @@
+# --- Python virtual environment ---
+venv/
+.venv/
+
+# --- Python cache and compiled files ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- Environment / secrets ---
+.env
+*.env
+credentials
+*.csv
+
+# --- Project output files ---
+output.mp3
+*.mp3
+
+# --- macOS clutter ---
+.DS_Store
+
+# --- VS Code settings ---
+.vscode/
