@@ -34,7 +34,7 @@ Before you begin, you'll need:
 Clone the repository and set up an isolated environment:
 
 ```bash
-git clone https://github.com/<your-username>/pdf-to-speech.git
+git clone https://github.com/AntoinePigeon/pdf-to-speech.git
 cd pdf-to-speech
 
 # Create and activate a virtual environment
